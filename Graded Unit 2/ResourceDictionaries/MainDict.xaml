@@ -1,0 +1,58 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.ResourceDictionaries">
+
+    <Style TargetType="RadioButton" x:Key="styleNavButton">
+        <!--I apply this style to the radio buttons-->
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <!--This lets me make a radio button look like a navigation item-->
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <!--Layout of a nav item-->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" x:Name="colIcon" />
+                            <ColumnDefinition Width="150" x:Name="colTxtMenuItem"/>
+                        </Grid.ColumnDefinitions>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <!--This is what changed the bg colour when a radio button is clicked-->
+                            <VisualStateGroup x:Name="CheckedStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="brushIcon" Storyboard.TargetProperty="Color" From="Transparent" To="{ThemeResource ThemeMenuItemSelected}" Duration="0:0:0.5" FillBehavior="HoldEnd" />
+                                        <ColorAnimation Storyboard.TargetName="brushMenuText" Storyboard.TargetProperty="Color" From="Transparent" To="{ThemeResource ThemeMenuItemSelected}" Duration="0:0:0.5" FillBehavior="HoldEnd" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked" />
+                                <VisualState x:Name="Indeterminate" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Grid Grid.Column="0" x:Name="icon" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <!--Menu Item Icon-->
+                            <Grid.Background>
+                                <SolidColorBrush Color="Transparent" x:Name="brushIcon"/>
+                                <!--Used to animate background colour-->
+                            </Grid.Background>
+                            <FontIcon VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Segoe MDL2 Assets" Glyph="{TemplateBinding Tag}"/>
+                        </Grid>
+                        <Grid Grid.Column="1" x:Name="txtMenuItem" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <!--Associated Text-->
+                            <Grid.Background>
+                                <SolidColorBrush Color="Transparent" x:Name="brushMenuText"/>
+                            </Grid.Background>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Text="{TemplateBinding Content}" />
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,82 @@
+﻿<UserControl
+    x:Class="Graded_Unit_2.CustomControls.PrescriptionControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cc="using:Graded_Unit_2.CustomControls"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Background="{ThemeResource ThemeBackground}" Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Name="txtName" VerticalAlignment="Center" Text="{x:Bind Text}" FontSize="20"></TextBlock>
+            <Button Name="btnAdvanced" IsEnabled="False" BorderBrush="{ThemeResource ThemeText}" BorderThickness="1" Background="Transparent" Margin="10,0,0,0" Click="btnAdvanced_Click">Edit VA</Button>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <cc:NumericUpDownScroll x:Name="nudSph" Items="{x:Bind sphItems}" PlaceholderText="Sph"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" valChanged="nudSph_valChanged"></cc:NumericUpDownScroll>
+            <cc:NumericUpDownScroll x:Name="nudCyl" IsEnabled="False" Items="{x:Bind cylItems}" Grid.Column ="1"  PlaceholderText="Cyl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" valChanged="nudCyl_valChanged"></cc:NumericUpDownScroll>
+            <Border Grid.Column="2" BorderBrush="LightGray" BorderThickness="0,0,2,0">
+                <cc:NumericUpDownScroll x:Name="nudAxis" Items="{x:Bind axisItems}" PlaceholderText="Axis" HorizontalAlignment="Stretch" IsEnabled="False"></cc:NumericUpDownScroll>
+            </Border>
+        </Grid> 
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <cc:NumericUpDownScroll x:Name="nudPrism" IsEnabled="False" Items="{x:Bind prismItems}" PlaceholderText="Prism" HorizontalAlignment="Stretch" valChanged="nudPrism_valChanged"></cc:NumericUpDownScroll>
+            <Border Grid.Column="1" BorderBrush="LightGray" BorderThickness="0,0,2,0">
+                <ComboBox Name="txtBase" PlaceholderText="Base" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False">
+                    <ComboBoxItem>UP</ComboBoxItem>
+                    <ComboBoxItem>DOWN</ComboBoxItem>
+                    <ComboBoxItem>IN</ComboBoxItem>
+                    <ComboBoxItem>OUT</ComboBoxItem>
+                </ComboBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <cc:NumericUpDownScroll x:Name="nudNear" IsEnabled="False" Items="{x:Bind nearAddItems}" PlaceholderText="Near Add" HorizontalAlignment="Stretch"></cc:NumericUpDownScroll>
+            <cc:NumericUpDownScroll x:Name="nudInt" IsEnabled="False" Items="{x:Bind intAddItems}" PlaceholderText="Int Add" Grid.Column="1" HorizontalAlignment="Stretch"></cc:NumericUpDownScroll>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Sph"/>
+            <TextBlock Grid.Column="1" Text="Cyl"/>
+            <TextBlock Grid.Column="2" Text="Axis"/>
+            <TextBlock Grid.Column="3" Text="Prism"/>
+            <TextBlock Grid.Column="4" Text="Base"/>
+            <TextBlock Grid.Column="5" Text="NearAdd"/>
+            <TextBlock Grid.Column="6" Text="IntAdd"/>
+        </Grid>
+    </Grid>
+</UserControl>

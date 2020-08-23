@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Graded_Unit_2.Pages.FrameViewerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cc="using:Graded_Unit_2.CustomControls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ThemeBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <RelativePanel Grid.ColumnSpan="2" BorderBrush="LightGray" BorderThickness="0,0,0,1">
+            <Button Background="{ThemeResource ThemeBackground}" Foreground="{ThemeResource ThemeText}" Name="btnBack" Height="99" Width="100" FontFamily="Segoe MDL2 Assets" FontSize="36" Content="&#xE72B;" Click="back_Click"></Button>
+            <TextBlock Name="txtHeader" RelativePanel.RightOf="btnBack" RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="32" Margin="10,0,0,0" Foreground="{ThemeResource ThemeText}">Frame Viewer</TextBlock>
+        </RelativePanel>
+        <cc:PhotoViewer x:Name="pvFrameViewer" Margin="20" Grid.Row="1" Images="{x:Bind Mode=OneWay, Path=frame.frameImages.views }"></cc:PhotoViewer>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" Grid.Column="1" Background="{ThemeResource ThemeBackground}" VerticalAlignment="Center">
+                <TextBlock FontSize="25" Foreground="{ThemeResource ThemeText}" FontWeight="ExtraBlack" VerticalAlignment="Center">Brand</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.brand}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="1" FontWeight="ExtraBlack">Model</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="1" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.model}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="2" FontWeight="ExtraBlack">Pole No</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="2" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.poleNo}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="3" FontWeight="ExtraBlack">Dimensions</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="3" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=DimensionString}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="4" FontWeight="ExtraBlack">Material</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="4" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.material}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="4" FontWeight="ExtraBlack">Colour</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="4" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.colour}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="5" FontWeight="ExtraBlack">Type</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="5" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.type}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" FontWeight="ExtraBlack">Suitable For Varifocals?</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.vari}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" FontWeight="ExtraBlack">Is This a Sunglass Frame?</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.isSunglass}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" FontWeight="ExtraBlack">Gender</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.gender}"></TextBlock>
+                <TextBlock FontSize="25" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" FontWeight="ExtraBlack">Barcode</TextBlock>
+                <TextBlock FontSize="20" VerticalAlignment="Center" Foreground="{ThemeResource ThemeText}" Grid.Row="6" Grid.Column="1" Text="{x:Bind Mode=OneWay, Path=frame.frameProperties.barcode}"></TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Grid.Row="2" HorizontalAlignment="Center" Click="virtualTryOn_Click" Width="200" Height="100" Background="{ThemeResource ThemeMainButton}">Virtual Try On</Button>
+        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Click="share_Click" Width="200" Height="100" Background="{ThemeResource ThemeMainButton}">Share</Button>
+    </Grid>
+</Page>

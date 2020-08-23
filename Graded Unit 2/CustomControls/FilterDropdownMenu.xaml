@@ -1,0 +1,111 @@
+﻿<UserControl
+    x:Class="Graded_Unit_2.CustomControls.FilterDropdownMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Name="mainGrid" Background="{ThemeResource ThemeBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Background="{ThemeResource ThemeBackground}" BorderBrush="{ThemeResource ThemeText}" Foreground="{ThemeResource ThemeText}" Style="{StaticResource styleFilterHeading}" Name="btnMain" IsRightTapEnabled="True" HorizontalAlignment="Stretch" Tapped="btnDropdownToggle_Tapped"  RightTapped="btnMain_RightTapped">Filter</Button>
+        <ScrollViewer Name="mainScrollViewer" Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+            <StackPanel Visibility="Collapsed" Name="spMain" Grid.Row="1" Orientation="Vertical" BorderBrush="{ThemeResource ThemeText}" BorderThickness="3,0,3,3">
+                <Button Name="btnGender" HorizontalAlignment="Stretch" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped">Gender</Button>
+                <StackPanel Name="spGender" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Male" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}"  Content="Female" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnFaceShape" Style="{StaticResource styleDropdownToggle}" HorizontalAlignment="Stretch" Tapped="btnDropdownToggle_Tapped">Face Shape</Button>
+                <StackPanel Name="spFaceShape" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Oval" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Round" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Rectangular" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Square" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnColour" Style="{StaticResource styleDropdownToggle}" HorizontalAlignment="Stretch" Tapped="btnDropdownToggle_Tapped">Colours</Button>
+                <StackPanel Name="spColour" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Red" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Green" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Purple" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Pink" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Black" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Bronze" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Gold" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Lilac" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Silver" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Blue" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Blush" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Tort" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Honey" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Navy" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Gray" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Olive" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Brown" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Pewter" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Caramel" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Gun" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Green" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Tobacco" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Burgundy" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnMaterial" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped" HorizontalAlignment="Stretch">Materials</Button>
+                <StackPanel Name="spMaterial" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Plastic" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Metal" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Flex" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Titanium" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnType" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped" HorizontalAlignment="Stretch">Types</Button>
+                <StackPanel Name="spType" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Fullrim" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Supra" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Rimless" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnSideLength" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped" HorizontalAlignment="Stretch">Side Length</Button>
+                <StackPanel Name="spSideLength" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="SmallSL" HorizontalAlignment="Stretch"  Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="MediumSL" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="LargeSL" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnWidth" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped" HorizontalAlignment="Stretch">Width</Button>
+                <StackPanel Name="spWidth" Visibility="Collapsed"  Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="SmallPD" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="MediumPD" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="LargePD" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnBrand" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped" HorizontalAlignment="Stretch">Brand</Button>
+                <StackPanel Name="spBrand" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Stepper" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Rochas" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Luxe" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Mayer" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Karl Lagerfield" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Bebe" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="7 For all Mankind" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Hicole Hirller" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Cacharel Paris" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Penguin" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Flex" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Davidoff" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                    <ToggleButton Style="{StaticResource styleDropdownItem}" Content="Peter Werth" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="True"></ToggleButton>
+                </StackPanel> 
+                <Button Name="btnSunglass" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped" HorizontalAlignment="Stretch">Sunglasses Only</Button>
+                <StackPanel Name="spSunglass" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Name="tbSunglass" Style="{StaticResource styleDropdownItem}" Content="" HorizontalAlignment="Stretch" Click="toggleButton_Click"></ToggleButton>
+                </StackPanel>
+                <Button Name="btnVari" Style="{StaticResource styleDropdownToggle}" Tapped="btnDropdownToggle_Tapped" HorizontalAlignment="Stretch">Vari Only</Button>
+                <StackPanel Name="spVari" Visibility="Collapsed" Orientation="Vertical">
+                    <ToggleButton Name="tbVari" Style="{StaticResource styleDropdownItem}" Content="" HorizontalAlignment="Stretch" Click="toggleButton_Click" IsChecked="False"></ToggleButton>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

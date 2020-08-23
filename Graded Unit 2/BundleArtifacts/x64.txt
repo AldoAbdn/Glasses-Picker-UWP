@@ -1,0 +1,2 @@
+MainPackage=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\bin\x64\Release\Graded Unit 2_1.0.18.0_x64.appx
+SymbolPackage=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\AppPackages\Black Version (x64, x86 and ARM)\Graded Unit 2_1.0.18.0_Test\Graded Unit 2_1.0.18.0_x64.appxsym

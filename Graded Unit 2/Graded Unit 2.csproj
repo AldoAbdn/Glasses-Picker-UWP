@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A2830257-1A21-4968-AB1F-F2AD4317386B}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Graded_Unit_2</RootNamespace>
+    <AssemblyName>Graded Unit 2</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Graded Unit 2_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppxPackageDir>F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\AppPackages\Black Version %28x64, x86 and ARM%29\</AppxPackageDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="CSV\Frames.csv" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppManager\AppManager.cs" />
+    <Compile Include="AppManager\BrowserDetails.cs" />
+    <Compile Include="AppManager\Detail.cs" />
+    <Compile Include="AppManager\EyeRX.cs" />
+    <Compile Include="AppManager\Frame.cs" />
+    <Compile Include="AppManager\FrameImages.cs" />
+    <Compile Include="AppManager\FrameProperties.cs" />
+    <Compile Include="AppManager\FrameSelector.cs" />
+    <Compile Include="AppManager\Mode.cs" />
+    <Compile Include="AppManager\Patient.cs" />
+    <Compile Include="AppManager\PatientDetails.cs" />
+    <Compile Include="AppManager\PatientImages.cs" />
+    <Compile Include="AppManager\Prescription.cs" />
+    <Compile Include="CustomControls\ColourItem.xaml.cs">
+      <DependentUpon>ColourItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\FaceShapeItem.xaml.cs">
+      <DependentUpon>FaceShapeItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\FilterDropdownMenu.xaml.cs">
+      <DependentUpon>FilterDropdownMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\FrameItem.xaml.cs">
+      <DependentUpon>FrameItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\MaterialItem.xaml.cs">
+      <DependentUpon>MaterialItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\NumericUpDownScroll.xaml.cs">
+      <DependentUpon>NumericUpDownScroll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PhotoViewer.xaml.cs">
+      <DependentUpon>PhotoViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PrescriptionControl.xaml.cs">
+      <DependentUpon>PrescriptionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SortDropdownMenu.xaml.cs">
+      <DependentUpon>SortDropdownMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SunglassItem.xaml.cs">
+      <DependentUpon>SunglassItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\TypeItem.xaml.cs">
+      <DependentUpon>TypeItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Events\FaceShapeEventArgs.cs" />
+    <Compile Include="Models\Colour.cs" />
+    <Compile Include="Models\FaceShape.cs" />
+    <Compile Include="Models\FrameType.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Pages\AboutYouPage.xaml.cs">
+      <DependentUpon>AboutYouPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutYouPages\DetailsForm.xaml.cs">
+      <DependentUpon>DetailsForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutYouPages\DetailsFromCamera.xaml.cs">
+      <DependentUpon>DetailsFromCamera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ColourPage.xaml.cs">
+      <DependentUpon>ColourPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FaceImagesPage.xaml.cs">
+      <DependentUpon>FaceImagesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FaceImagesPages\ConfirmPicture.xaml.cs">
+      <DependentUpon>ConfirmPicture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FaceImagesPages\TakePicture.xaml.cs">
+      <DependentUpon>TakePicture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FaceImagesPages\TakeSidePicture.xaml.cs">
+      <DependentUpon>TakeSidePicture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FaceShapePage.xaml.cs">
+      <DependentUpon>FaceShapePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FaceWidthPage.xaml.cs">
+      <DependentUpon>FaceWidthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FrameBrowserPage.xaml.cs">
+      <DependentUpon>FrameBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FramePickerPage.xaml.cs">
+      <DependentUpon>FramePickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FrameTypePage.xaml.cs">
+      <DependentUpon>FrameTypePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FrameViewerPage.xaml.cs">
+      <DependentUpon>FrameViewerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaterialPage.xaml.cs">
+      <DependentUpon>MaterialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NavPage.xaml.cs">
+      <DependentUpon>NavPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrescriptionPage.xaml.cs">
+      <DependentUpon>PrescriptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrescriptionPages\PrescriptionDialog.xaml.cs">
+      <DependentUpon>PrescriptionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ResultsPage.xaml.cs">
+      <DependentUpon>ResultsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sharing\ShareDialogPages\ShareResultPage.xaml.cs">
+      <DependentUpon>ShareResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sharing\ShareDialogPages\ShareSelectPage.xaml.cs">
+      <DependentUpon>ShareSelectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sharing\ShareDialog.xaml.cs">
+      <DependentUpon>ShareDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sharing\ShareType.cs" />
+    <Compile Include="Pages\SideLengthPage.xaml.cs">
+      <DependentUpon>SideLengthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SunglassPage.xaml.cs">
+      <DependentUpon>SunglassPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestPages\BrowserDetailsTest.xaml.cs">
+      <DependentUpon>BrowserDetailsTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestPages\OCRTestPage.xaml.cs">
+      <DependentUpon>OCRTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestPages\PatientDetailsTest.xaml.cs">
+      <DependentUpon>PatientDetailsTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VirtualTryOnPage.xaml.cs">
+      <DependentUpon>VirtualTryOnPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WarningDialog.xaml.cs">
+      <DependentUpon>WarningDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppManager\VirtualTryOnImages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Graded Unit 2_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\colleague help.jpg" />
+    <Content Include="Images\FaceShapes\Oval.png" />
+    <Content Include="Images\FaceShapes\Rectangular.jpg" />
+    <Content Include="Images\FaceShapes\Round.jpg" />
+    <Content Include="Images\FaceShapes\Square.jpg" />
+    <Content Include="Images\faceTest.jpg" />
+    <Content Include="Images\frameDimensions.jpg" />
+    <Content Include="Images\FrameImages\13A1.jpg" />
+    <Content Include="Images\FrameImages\13A2.jpg" />
+    <Content Include="Images\FrameImages\13A3.jpg" />
+    <Content Include="Images\FrameImages\13B1.jpg" />
+    <Content Include="Images\FrameImages\13B2.jpg" />
+    <Content Include="Images\FrameImages\13B3.jpg" />
+    <Content Include="Images\FrameImages\13C1.jpg" />
+    <Content Include="Images\FrameImages\13C2.jpg" />
+    <Content Include="Images\FrameImages\13C3.jpg" />
+    <Content Include="Images\FrameImages\13D1.jpg" />
+    <Content Include="Images\FrameImages\13D2.jpg" />
+    <Content Include="Images\FrameImages\13D3.jpg" />
+    <Content Include="Images\FrameImages\13E1.jpg" />
+    <Content Include="Images\FrameImages\13E2.jpg" />
+    <Content Include="Images\FrameImages\13E3.jpg" />
+    <Content Include="Images\FrameImages\13F1.jpg" />
+    <Content Include="Images\FrameImages\13F2.jpg" />
+    <Content Include="Images\FrameImages\13F3.jpg" />
+    <Content Include="Images\FrameImages\13G1.jpg" />
+    <Content Include="Images\FrameImages\13G2.jpg" />
+    <Content Include="Images\FrameImages\13G3.jpg" />
+    <Content Include="Images\FrameImages\13H1.jpg" />
+    <Content Include="Images\FrameImages\13H2.jpg" />
+    <Content Include="Images\FrameImages\13H3.jpg" />
+    <Content Include="Images\FrameImages\13I1.jpg" />
+    <Content Include="Images\FrameImages\13I2.jpg" />
+    <Content Include="Images\FrameImages\13I3.jpg" />
+    <Content Include="Images\FrameImages\13K1.jpg" />
+    <Content Include="Images\FrameImages\13K2.jpg" />
+    <Content Include="Images\FrameImages\13K3.jpg" />
+    <Content Include="Images\FrameImages\13L1.jpg" />
+    <Content Include="Images\FrameImages\13L2.jpg" />
+    <Content Include="Images\FrameImages\13L3.jpg" />
+    <Content Include="Images\FrameImages\13N1.jpg" />
+    <Content Include="Images\FrameImages\13N2.jpg" />
+    <Content Include="Images\FrameImages\13N3.jpg" />
+    <Content Include="Images\FrameImages\13O1.jpg" />
+    <Content Include="Images\FrameImages\13O2.jpg" />
+    <Content Include="Images\FrameImages\13O3.jpg" />
+    <Content Include="Images\FrameImages\13P1.jpg" />
+    <Content Include="Images\FrameImages\13P2.jpg" />
+    <Content Include="Images\FrameImages\13P3.jpg" />
+    <Content Include="Images\FrameImages\13R1.jpg" />
+    <Content Include="Images\FrameImages\13R2.jpg" />
+    <Content Include="Images\FrameImages\13R3.jpg" />
+    <Content Include="Images\FrameImages\14A1.JPG" />
+    <Content Include="Images\FrameImages\14A2.JPG" />
+    <Content Include="Images\FrameImages\14A3.JPG" />
+    <Content Include="Images\FrameImages\14B1.JPG" />
+    <Content Include="Images\FrameImages\14B2.JPG" />
+    <Content Include="Images\FrameImages\14B3.JPG" />
+    <Content Include="Images\FrameImages\14C1.JPG" />
+    <Content Include="Images\FrameImages\14C2.JPG" />
+    <Content Include="Images\FrameImages\14C3.JPG" />
+    <Content Include="Images\FrameImages\14D1.JPG" />
+    <Content Include="Images\FrameImages\14D2.JPG" />
+    <Content Include="Images\FrameImages\14D3.JPG" />
+    <Content Include="Images\FrameImages\14E1.JPG" />
+    <Content Include="Images\FrameImages\14E2.JPG" />
+    <Content Include="Images\FrameImages\14E3.JPG" />
+    <Content Include="Images\FrameImages\14F1.JPG" />
+    <Content Include="Images\FrameImages\14F2.JPG" />
+    <Content Include="Images\FrameImages\14F3.JPG" />
+    <Content Include="Images\FrameImages\14G1.JPG" />
+    <Content Include="Images\FrameImages\14G2.JPG" />
+    <Content Include="Images\FrameImages\14G3.JPG" />
+    <Content Include="Images\FrameImages\14H1.JPG" />
+    <Content Include="Images\FrameImages\14H2.JPG" />
+    <Content Include="Images\FrameImages\14H3.JPG" />
+    <Content Include="Images\FrameImages\14I1.JPG" />
+    <Content Include="Images\FrameImages\14I2.JPG" />
+    <Content Include="Images\FrameImages\14I3.JPG" />
+    <Content Include="Images\FrameImages\14K1.JPG" />
+    <Content Include="Images\FrameImages\14K2.JPG" />
+    <Content Include="Images\FrameImages\14K3.JPG" />
+    <Content Include="Images\FrameImages\14L1.JPG" />
+    <Content Include="Images\FrameImages\14L2.JPG" />
+    <Content Include="Images\FrameImages\14L3.JPG" />
+    <Content Include="Images\FrameImages\14M1.JPG" />
+    <Content Include="Images\FrameImages\14M2.JPG" />
+    <Content Include="Images\FrameImages\14M3.JPG" />
+    <Content Include="Images\FrameImages\14N1.JPG" />
+    <Content Include="Images\FrameImages\14N2.JPG" />
+    <Content Include="Images\FrameImages\14N3.JPG" />
+    <Content Include="Images\FrameImages\14O1.JPG" />
+    <Content Include="Images\FrameImages\14O2.JPG" />
+    <Content Include="Images\FrameImages\14O3.JPG" />
+    <Content Include="Images\FrameImages\14P1.JPG" />
+    <Content Include="Images\FrameImages\14P2.JPG" />
+    <Content Include="Images\FrameImages\14P3.JPG" />
+    <Content Include="Images\FrameImages\14Q1.JPG" />
+    <Content Include="Images\FrameImages\14Q2.JPG" />
+    <Content Include="Images\FrameImages\14Q3.JPG" />
+    <Content Include="Images\FrameImages\14R1.JPG" />
+    <Content Include="Images\FrameImages\14R2.JPG" />
+    <Content Include="Images\FrameImages\14R3.JPG" />
+    <Content Include="Images\FrameImages\15A1.JPG" />
+    <Content Include="Images\FrameImages\15A2.JPG" />
+    <Content Include="Images\FrameImages\15A3.JPG" />
+    <Content Include="Images\FrameImages\15B1.JPG" />
+    <Content Include="Images\FrameImages\15B2.JPG" />
+    <Content Include="Images\FrameImages\15B3.JPG" />
+    <Content Include="Images\FrameImages\15C1.JPG" />
+    <Content Include="Images\FrameImages\15C2.JPG" />
+    <Content Include="Images\FrameImages\15C3.JPG" />
+    <Content Include="Images\FrameImages\15D1.JPG" />
+    <Content Include="Images\FrameImages\15D2.JPG" />
+    <Content Include="Images\FrameImages\15D3.JPG" />
+    <Content Include="Images\FrameImages\15E1.JPG" />
+    <Content Include="Images\FrameImages\15E2.JPG" />
+    <Content Include="Images\FrameImages\15E3.JPG" />
+    <Content Include="Images\FrameImages\15F1.JPG" />
+    <Content Include="Images\FrameImages\15F2.JPG" />
+    <Content Include="Images\FrameImages\15F3.JPG" />
+    <Content Include="Images\FrameImages\15G1.JPG" />
+    <Content Include="Images\FrameImages\15G2.JPG" />
+    <Content Include="Images\FrameImages\15G3.JPG" />
+    <Content Include="Images\FrameImages\15H1.JPG" />
+    <Content Include="Images\FrameImages\15H2.JPG" />
+    <Content Include="Images\FrameImages\15H3.JPG" />
+    <Content Include="Images\FrameImages\15I1.JPG" />
+    <Content Include="Images\FrameImages\15I2.JPG" />
+    <Content Include="Images\FrameImages\15I3.JPG" />
+    <Content Include="Images\FrameImages\15K1.JPG" />
+    <Content Include="Images\FrameImages\15K2.JPG" />
+    <Content Include="Images\FrameImages\15K3.JPG" />
+    <Content Include="Images\FrameImages\15L1.JPG" />
+    <Content Include="Images\FrameImages\15L2.JPG" />
+    <Content Include="Images\FrameImages\15L3.JPG" />
+    <Content Include="Images\FrameImages\15M1.JPG" />
+    <Content Include="Images\FrameImages\15M2.JPG" />
+    <Content Include="Images\FrameImages\15M3.JPG" />
+    <Content Include="Images\FrameImages\15N1.JPG" />
+    <Content Include="Images\FrameImages\15N2.JPG" />
+    <Content Include="Images\FrameImages\15N3.JPG" />
+    <Content Include="Images\FrameImages\15O1.JPG" />
+    <Content Include="Images\FrameImages\15O2.JPG" />
+    <Content Include="Images\FrameImages\15O3.JPG" />
+    <Content Include="Images\FrameImages\15P1.JPG" />
+    <Content Include="Images\FrameImages\15P2.JPG" />
+    <Content Include="Images\FrameImages\15P3.JPG" />
+    <Content Include="Images\FrameImages\15Q1.JPG" />
+    <Content Include="Images\FrameImages\15Q2.JPG" />
+    <Content Include="Images\FrameImages\15Q3.JPG" />
+    <Content Include="Images\FrameImages\15R1.JPG" />
+    <Content Include="Images\FrameImages\15R2.JPG" />
+    <Content Include="Images\FrameImages\15R3.JPG" />
+    <Content Include="Images\FrameImages\16E1.JPG" />
+    <Content Include="Images\FrameImages\16E2.JPG" />
+    <Content Include="Images\FrameImages\16E3.JPG" />
+    <Content Include="Images\FrameImages\16F1.JPG" />
+    <Content Include="Images\FrameImages\16F2.JPG" />
+    <Content Include="Images\FrameImages\16F3.JPG" />
+    <Content Include="Images\FrameImages\16G1.JPG" />
+    <Content Include="Images\FrameImages\16G2.JPG" />
+    <Content Include="Images\FrameImages\16G3.JPG" />
+    <Content Include="Images\FrameImages\16H1.JPG" />
+    <Content Include="Images\FrameImages\16H2.JPG" />
+    <Content Include="Images\FrameImages\16H3.JPG" />
+    <Content Include="Images\FrameImages\16I1.JPG" />
+    <Content Include="Images\FrameImages\16I2.JPG" />
+    <Content Include="Images\FrameImages\16I3.JPG" />
+    <Content Include="Images\FrameImages\16K1.JPG" />
+    <Content Include="Images\FrameImages\16K2.JPG" />
+    <Content Include="Images\FrameImages\16K3.JPG" />
+    <Content Include="Images\FrameImages\16M1.JPG" />
+    <Content Include="Images\FrameImages\16M2.JPG" />
+    <Content Include="Images\FrameImages\16M3.JPG" />
+    <Content Include="Images\FrameImages\16N1.JPG" />
+    <Content Include="Images\FrameImages\16N2.JPG" />
+    <Content Include="Images\FrameImages\16N3.JPG" />
+    <Content Include="Images\FrameImages\16O1.JPG" />
+    <Content Include="Images\FrameImages\16O2.JPG" />
+    <Content Include="Images\FrameImages\16O3.JPG" />
+    <Content Include="Images\FrameImages\16P1.JPG" />
+    <Content Include="Images\FrameImages\16P2.JPG" />
+    <Content Include="Images\FrameImages\16P3.JPG" />
+    <Content Include="Images\FrameImages\16Q1.JPG" />
+    <Content Include="Images\FrameImages\16Q2.JPG" />
+    <Content Include="Images\FrameImages\16Q3.JPG" />
+    <Content Include="Images\FrameImages\16R1.JPG" />
+    <Content Include="Images\FrameImages\16R2.JPG" />
+    <Content Include="Images\FrameImages\16R3.JPG" />
+    <Content Include="Images\FrameImages\17A1.JPG" />
+    <Content Include="Images\FrameImages\17A2.JPG" />
+    <Content Include="Images\FrameImages\17A3.JPG" />
+    <Content Include="Images\FrameImages\17B1.JPG" />
+    <Content Include="Images\FrameImages\17B2.JPG" />
+    <Content Include="Images\FrameImages\17B3.JPG" />
+    <Content Include="Images\FrameImages\17C1.JPG" />
+    <Content Include="Images\FrameImages\17C2.JPG" />
+    <Content Include="Images\FrameImages\17C3.JPG" />
+    <Content Include="Images\FrameImages\17D1.JPG" />
+    <Content Include="Images\FrameImages\17D2.JPG" />
+    <Content Include="Images\FrameImages\17D3.JPG" />
+    <Content Include="Images\FrameImages\17E1.JPG" />
+    <Content Include="Images\FrameImages\17E2.JPG" />
+    <Content Include="Images\FrameImages\17E3.JPG" />
+    <Content Include="Images\FrameImages\17F1.JPG" />
+    <Content Include="Images\FrameImages\17F2.JPG" />
+    <Content Include="Images\FrameImages\17F3.JPG" />
+    <Content Include="Images\FrameImages\17G1.JPG" />
+    <Content Include="Images\FrameImages\17G2.JPG" />
+    <Content Include="Images\FrameImages\17G3.JPG" />
+    <Content Include="Images\FrameImages\17H1.JPG" />
+    <Content Include="Images\FrameImages\17H2.JPG" />
+    <Content Include="Images\FrameImages\17H3.JPG" />
+    <Content Include="Images\FrameImages\17I1.JPG" />
+    <Content Include="Images\FrameImages\17I2.JPG" />
+    <Content Include="Images\FrameImages\17I3.JPG" />
+    <Content Include="Images\FrameImages\17K1.JPG" />
+    <Content Include="Images\FrameImages\17K2.JPG" />
+    <Content Include="Images\FrameImages\17K3.JPG" />
+    <Content Include="Images\FrameImages\17L1.JPG" />
+    <Content Include="Images\FrameImages\17L2.JPG" />
+    <Content Include="Images\FrameImages\17L3.JPG" />
+    <Content Include="Images\FrameImages\17M1.JPG" />
+    <Content Include="Images\FrameImages\17M2.JPG" />
+    <Content Include="Images\FrameImages\17M3.JPG" />
+    <Content Include="Images\FrameImages\17O1.JPG" />
+    <Content Include="Images\FrameImages\17O2.JPG" />
+    <Content Include="Images\FrameImages\17O3.JPG" />
+    <Content Include="Images\FrameImages\17P1.JPG" />
+    <Content Include="Images\FrameImages\17P2.JPG" />
+    <Content Include="Images\FrameImages\17P3.JPG" />
+    <Content Include="Images\FrameImages\17Q1.JPG" />
+    <Content Include="Images\FrameImages\17Q2.JPG" />
+    <Content Include="Images\FrameImages\17Q3.JPG" />
+    <Content Include="Images\FrameImages\17R1.JPG" />
+    <Content Include="Images\FrameImages\17R2.JPG" />
+    <Content Include="Images\FrameImages\17R3.JPG" />
+    <Content Include="Images\FrameImages\18A1.JPG" />
+    <Content Include="Images\FrameImages\18A2.JPG" />
+    <Content Include="Images\FrameImages\18A3.JPG" />
+    <Content Include="Images\FrameImages\18B1.JPG" />
+    <Content Include="Images\FrameImages\18B2.JPG" />
+    <Content Include="Images\FrameImages\18B3.JPG" />
+    <Content Include="Images\FrameImages\18C1.JPG" />
+    <Content Include="Images\FrameImages\18C2.JPG" />
+    <Content Include="Images\FrameImages\18C3.JPG" />
+    <Content Include="Images\FrameImages\18D1.JPG" />
+    <Content Include="Images\FrameImages\18D2.JPG" />
+    <Content Include="Images\FrameImages\18D3.JPG" />
+    <Content Include="Images\FrameImages\18E1.JPG" />
+    <Content Include="Images\FrameImages\18E2.JPG" />
+    <Content Include="Images\FrameImages\18E3.JPG" />
+    <Content Include="Images\FrameImages\18F1.JPG" />
+    <Content Include="Images\FrameImages\18F2.JPG" />
+    <Content Include="Images\FrameImages\18F3.JPG" />
+    <Content Include="Images\FrameImages\18G1.JPG" />
+    <Content Include="Images\FrameImages\18G2.JPG" />
+    <Content Include="Images\FrameImages\18G3.JPG" />
+    <Content Include="Images\FrameImages\18H1.JPG" />
+    <Content Include="Images\FrameImages\18H2.JPG" />
+    <Content Include="Images\FrameImages\18H3.JPG" />
+    <Content Include="Images\FrameImages\18I1.JPG" />
+    <Content Include="Images\FrameImages\18I2.JPG" />
+    <Content Include="Images\FrameImages\18I3.JPG" />
+    <Content Include="Images\FrameImages\18K1.JPG" />
+    <Content Include="Images\FrameImages\18K2.JPG" />
+    <Content Include="Images\FrameImages\18K3.JPG" />
+    <Content Include="Images\FrameImages\18L1.JPG" />
+    <Content Include="Images\FrameImages\18L2.JPG" />
+    <Content Include="Images\FrameImages\18L3.JPG" />
+    <Content Include="Images\FrameImages\18M1.JPG" />
+    <Content Include="Images\FrameImages\18M2.JPG" />
+    <Content Include="Images\FrameImages\18M3.JPG" />
+    <Content Include="Images\FrameImages\18N1.JPG" />
+    <Content Include="Images\FrameImages\18N2.JPG" />
+    <Content Include="Images\FrameImages\18N3.JPG" />
+    <Content Include="Images\FrameImages\18O1.JPG" />
+    <Content Include="Images\FrameImages\18O2.JPG" />
+    <Content Include="Images\FrameImages\18O3.JPG" />
+    <Content Include="Images\FrameImages\18P1.JPG" />
+    <Content Include="Images\FrameImages\18P2.JPG" />
+    <Content Include="Images\FrameImages\18P3.JPG" />
+    <Content Include="Images\FrameImages\18Q1.JPG" />
+    <Content Include="Images\FrameImages\18Q2.JPG" />
+    <Content Include="Images\FrameImages\18Q3.JPG" />
+    <Content Include="Images\FrameImages\18R1.JPG" />
+    <Content Include="Images\FrameImages\18R2.JPG" />
+    <Content Include="Images\FrameImages\18R3.JPG" />
+    <Content Include="Images\FrameImages\19A1.JPG" />
+    <Content Include="Images\FrameImages\19A2.JPG" />
+    <Content Include="Images\FrameImages\19B1.JPG" />
+    <Content Include="Images\FrameImages\19B2.JPG" />
+    <Content Include="Images\FrameImages\19B3.JPG" />
+    <Content Include="Images\FrameImages\19C1.JPG" />
+    <Content Include="Images\FrameImages\19C2.JPG" />
+    <Content Include="Images\FrameImages\19C3.JPG" />
+    <Content Include="Images\FrameImages\19D1.JPG" />
+    <Content Include="Images\FrameImages\19D2.JPG" />
+    <Content Include="Images\FrameImages\19D3.JPG" />
+    <Content Include="Images\FrameImages\19E1.JPG" />
+    <Content Include="Images\FrameImages\19E2.JPG" />
+    <Content Include="Images\FrameImages\19E3.JPG" />
+    <Content Include="Images\FrameImages\19F1.JPG" />
+    <Content Include="Images\FrameImages\19F2.JPG" />
+    <Content Include="Images\FrameImages\19F3.JPG" />
+    <Content Include="Images\FrameImages\19G1.JPG" />
+    <Content Include="Images\FrameImages\19G2.JPG" />
+    <Content Include="Images\FrameImages\19G3.JPG" />
+    <Content Include="Images\FrameImages\19K1.JPG" />
+    <Content Include="Images\FrameImages\19K2.JPG" />
+    <Content Include="Images\FrameImages\19K3.JPG" />
+    <Content Include="Images\FrameImages\19L1.JPG" />
+    <Content Include="Images\FrameImages\19L2.JPG" />
+    <Content Include="Images\FrameImages\19L3.JPG" />
+    <Content Include="Images\FrameImages\20A1.JPG" />
+    <Content Include="Images\FrameImages\20A2.JPG" />
+    <Content Include="Images\FrameImages\20A3.JPG" />
+    <Content Include="Images\FrameImages\20B1.JPG" />
+    <Content Include="Images\FrameImages\20B2.JPG" />
+    <Content Include="Images\FrameImages\20B3.JPG" />
+    <Content Include="Images\FrameImages\20C1.JPG" />
+    <Content Include="Images\FrameImages\20C2.JPG" />
+    <Content Include="Images\FrameImages\20C3.JPG" />
+    <Content Include="Images\FrameImages\20D1.JPG" />
+    <Content Include="Images\FrameImages\20D2.JPG" />
+    <Content Include="Images\FrameImages\20D3.JPG" />
+    <Content Include="Images\FrameImages\20E1.JPG" />
+    <Content Include="Images\FrameImages\20E2.JPG" />
+    <Content Include="Images\FrameImages\20E3.JPG" />
+    <Content Include="Images\FrameImages\20F1.JPG" />
+    <Content Include="Images\FrameImages\20F2.JPG" />
+    <Content Include="Images\FrameImages\20F3.JPG" />
+    <Content Include="Images\FrameImages\20G1.JPG" />
+    <Content Include="Images\FrameImages\20G2.JPG" />
+    <Content Include="Images\FrameImages\20G3.JPG" />
+    <Content Include="Images\FrameImages\20H1.JPG" />
+    <Content Include="Images\FrameImages\20H2.JPG" />
+    <Content Include="Images\FrameImages\20H3.JPG" />
+    <Content Include="Images\FrameImages\20I1.JPG" />
+    <Content Include="Images\FrameImages\20I2.JPG" />
+    <Content Include="Images\FrameImages\20I3.JPG" />
+    <Content Include="Images\FrameImages\20K1.JPG" />
+    <Content Include="Images\FrameImages\20K2.JPG" />
+    <Content Include="Images\FrameImages\20K3.JPG" />
+    <Content Include="Images\FrameImages\20M1.JPG" />
+    <Content Include="Images\FrameImages\20M2.JPG" />
+    <Content Include="Images\FrameImages\20M3.JPG" />
+    <Content Include="Images\FrameImages\20N1.JPG" />
+    <Content Include="Images\FrameImages\20N2.JPG" />
+    <Content Include="Images\FrameImages\20N3.JPG" />
+    <Content Include="Images\FrameImages\20O1.JPG" />
+    <Content Include="Images\FrameImages\20O2.JPG" />
+    <Content Include="Images\FrameImages\20O3.JPG" />
+    <Content Include="Images\FrameImages\20P1.JPG" />
+    <Content Include="Images\FrameImages\20P2.JPG" />
+    <Content Include="Images\FrameImages\20P3.JPG" />
+    <Content Include="Images\FrameImages\20Q1.JPG" />
+    <Content Include="Images\FrameImages\20Q2.JPG" />
+    <Content Include="Images\FrameImages\20Q3.JPG" />
+    <Content Include="Images\FrameImages\20R1.JPG" />
+    <Content Include="Images\FrameImages\20R2.JPG" />
+    <Content Include="Images\FrameImages\20R3.JPG" />
+    <Content Include="Images\FrameImages\21A1.JPG" />
+    <Content Include="Images\FrameImages\21A2.JPG" />
+    <Content Include="Images\FrameImages\21A3.JPG" />
+    <Content Include="Images\FrameImages\21B1.JPG" />
+    <Content Include="Images\FrameImages\21B2.JPG" />
+    <Content Include="Images\FrameImages\21B3.JPG" />
+    <Content Include="Images\FrameImages\21C1.JPG" />
+    <Content Include="Images\FrameImages\21C2.JPG" />
+    <Content Include="Images\FrameImages\21C3.JPG" />
+    <Content Include="Images\FrameImages\21D1.JPG" />
+    <Content Include="Images\FrameImages\21D2.JPG" />
+    <Content Include="Images\FrameImages\21D3.JPG" />
+    <Content Include="Images\FrameImages\21E1.JPG" />
+    <Content Include="Images\FrameImages\21E2.JPG" />
+    <Content Include="Images\FrameImages\21E3.JPG" />
+    <Content Include="Images\FrameImages\21F1.JPG" />
+    <Content Include="Images\FrameImages\21F2.JPG" />
+    <Content Include="Images\FrameImages\21F3.JPG" />
+    <Content Include="Images\FrameImages\21G1.JPG" />
+    <Content Include="Images\FrameImages\21G2.JPG" />
+    <Content Include="Images\FrameImages\21G3.JPG" />
+    <Content Include="Images\FrameImages\21H1.JPG" />
+    <Content Include="Images\FrameImages\21H2.JPG" />
+    <Content Include="Images\FrameImages\21H3.JPG" />
+    <Content Include="Images\FrameImages\21I1.JPG" />
+    <Content Include="Images\FrameImages\21I2.JPG" />
+    <Content Include="Images\FrameImages\21I3.JPG" />
+    <Content Include="Images\FrameImages\21K1.JPG" />
+    <Content Include="Images\FrameImages\21K2.JPG" />
+    <Content Include="Images\FrameImages\21K3.JPG" />
+    <Content Include="Images\FrameImages\21L1.JPG" />
+    <Content Include="Images\FrameImages\21L2.JPG" />
+    <Content Include="Images\FrameImages\21L3.JPG" />
+    <Content Include="Images\FrameImages\21M1.JPG" />
+    <Content Include="Images\FrameImages\21M2.JPG" />
+    <Content Include="Images\FrameImages\21M3.JPG" />
+    <Content Include="Images\FrameImages\21N1.JPG" />
+    <Content Include="Images\FrameImages\21N2.JPG" />
+    <Content Include="Images\FrameImages\21N3.JPG" />
+    <Content Include="Images\FrameImages\21O1.JPG" />
+    <Content Include="Images\FrameImages\21O2.JPG" />
+    <Content Include="Images\FrameImages\21O3.JPG" />
+    <Content Include="Images\FrameImages\21P1.JPG" />
+    <Content Include="Images\FrameImages\21P2.JPG" />
+    <Content Include="Images\FrameImages\21P3.JPG" />
+    <Content Include="Images\FrameImages\21Q1.JPG" />
+    <Content Include="Images\FrameImages\21Q2.JPG" />
+    <Content Include="Images\FrameImages\21Q3.JPG" />
+    <Content Include="Images\FrameImages\21R1.JPG" />
+    <Content Include="Images\FrameImages\21R2.JPG" />
+    <Content Include="Images\FrameImages\21R3.JPG" />
+    <Content Include="Images\FrameImages\22A1.jpg" />
+    <Content Include="Images\FrameImages\22A2.jpg" />
+    <Content Include="Images\FrameImages\22A3.jpg" />
+    <Content Include="Images\FrameImages\22B1.jpg" />
+    <Content Include="Images\FrameImages\22B2.jpg" />
+    <Content Include="Images\FrameImages\22B3.jpg" />
+    <Content Include="Images\FrameImages\22C1.jpg" />
+    <Content Include="Images\FrameImages\22C2.jpg" />
+    <Content Include="Images\FrameImages\22C3.jpg" />
+    <Content Include="Images\FrameImages\22D1.jpg" />
+    <Content Include="Images\FrameImages\22D2.jpg" />
+    <Content Include="Images\FrameImages\22D3.jpg" />
+    <Content Include="Images\FrameImages\22E1.jpg" />
+    <Content Include="Images\FrameImages\22E2.jpg" />
+    <Content Include="Images\FrameImages\22E3.jpg" />
+    <Content Include="Images\FrameImages\22F1.jpg" />
+    <Content Include="Images\FrameImages\22F2.jpg" />
+    <Content Include="Images\FrameImages\22F3.jpg" />
+    <Content Include="Images\FrameImages\22G1.jpg" />
+    <Content Include="Images\FrameImages\22G2.jpg" />
+    <Content Include="Images\FrameImages\22G3.jpg" />
+    <Content Include="Images\FrameImages\22H1.jpg" />
+    <Content Include="Images\FrameImages\22H2.jpg" />
+    <Content Include="Images\FrameImages\22H3.jpg" />
+    <Content Include="Images\FrameImages\22I1.jpg" />
+    <Content Include="Images\FrameImages\22I2.jpg" />
+    <Content Include="Images\FrameImages\22I3.jpg" />
+    <Content Include="Images\FrameImages\22K1.jpg" />
+    <Content Include="Images\FrameImages\22K2.jpg" />
+    <Content Include="Images\FrameImages\22K3.jpg" />
+    <Content Include="Images\FrameImages\22L1.jpg" />
+    <Content Include="Images\FrameImages\22L2.jpg" />
+    <Content Include="Images\FrameImages\22L3.jpg" />
+    <Content Include="Images\FrameImages\22M1.jpg" />
+    <Content Include="Images\FrameImages\22M2.jpg" />
+    <Content Include="Images\FrameImages\22M3.jpg" />
+    <Content Include="Images\FrameImages\22N1.jpg" />
+    <Content Include="Images\FrameImages\22N2.jpg" />
+    <Content Include="Images\FrameImages\22N3.jpg" />
+    <Content Include="Images\FrameImages\22O1.jpg" />
+    <Content Include="Images\FrameImages\22O2.jpg" />
+    <Content Include="Images\FrameImages\22O3.jpg" />
+    <Content Include="Images\FrameImages\22P1.jpg" />
+    <Content Include="Images\FrameImages\22P2.jpg" />
+    <Content Include="Images\FrameImages\22P3.jpg" />
+    <Content Include="Images\FrameImages\22Q1.jpg" />
+    <Content Include="Images\FrameImages\22Q2.jpg" />
+    <Content Include="Images\FrameImages\22Q3.jpg" />
+    <Content Include="Images\FrameImages\22R1.jpg" />
+    <Content Include="Images\FrameImages\22R2.jpg" />
+    <Content Include="Images\FrameImages\22R3.jpg" />
+    <Content Include="Images\imageUnavailable.png" />
+    <Content Include="Images\ShareImages\facebookLogo.png" />
+    <Content Include="Images\ShareImages\twitterLogo.png" />
+    <Content Include="Images\test.jpg" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CustomControls\ColourItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\FaceShapeItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\FilterDropdownMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\FrameItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\MaterialItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\NumericUpDownScroll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\PhotoViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\PrescriptionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\SortDropdownMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\SunglassItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\TypeItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AboutYouPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AboutYouPages\DetailsForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AboutYouPages\DetailsFromCamera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ColourPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FaceImagesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FaceImagesPages\ConfirmPicture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FaceImagesPages\TakePicture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FaceImagesPages\TakeSidePicture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FaceShapePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FaceWidthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FrameBrowserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FramePickerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FrameTypePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FrameViewerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MaterialPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NavPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrescriptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrescriptionPages\PrescriptionDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sharing\ShareDialogPages\ShareResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sharing\ShareDialogPages\ShareSelectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sharing\ShareDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SideLengthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SunglassPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TestPages\BrowserDetailsTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TestPages\OCRTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TestPages\PatientDetailsTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VirtualTryOnPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WarningDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceDictionaries\CustomControlsDict.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="ResourceDictionaries\Dark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="ResourceDictionaries\Light.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="ResourceDictionaries\MainDict.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

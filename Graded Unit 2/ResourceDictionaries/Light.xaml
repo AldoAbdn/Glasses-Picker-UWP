@@ -1,0 +1,15 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.ResourceDictionaries"
+    >
+    <SolidColorBrush x:Key="ThemeText" Color="Black"/>
+    <SolidColorBrush x:Key="ThemeMenuItemUnselected" Color="DarkRed"/>
+    <SolidColorBrush x:Key="ThemeBackground" Color="White"/>
+    <SolidColorBrush x:Key="ThemeTextBlack" Color="Black"/>
+    <SolidColorBrush x:Key="ThemeMainButton" Color="LightBlue"/>
+    <SolidColorBrush x:Key="ThemeSupButton" Color="LightGreen"/>
+    <SolidColorBrush x:Key="ThemeMenuItemSelectedBrush" Color="LightBlue"/>
+    <SolidColorBrush x:Key="ThemeDropdownSubMenuButton" Color="LightGreen"/>
+    <Color x:Key="ThemeMenuItemSelected">LightBlue</Color>
+</ResourceDictionary>

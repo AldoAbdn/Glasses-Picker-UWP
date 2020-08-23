@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="Graded_Unit_2.Pages.NavPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cc="using:Graded_Unit_2.CustomControls"
+    NavigationCacheMode="Required"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ThemeBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" ></RowDefinition>
+            <!--Top Bar-->
+            <RowDefinition Height="*"></RowDefinition>
+            <!--Split View with nav and frame-->
+        </Grid.RowDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="navPageVisualState">
+                <VisualState x:Name="Mobile">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="txtHeader.FontSize" Value="18"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet" />
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="728"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <!--Top Bar-->
+        <RelativePanel Grid.Row="0" BorderBrush="LightGray" BorderThickness="0,0,0,1"> 
+            <ToggleButton Name="btnToggleNav" BorderThickness="0" BorderBrush="{ThemeResource ThemeText}" Background="{ThemeResource ThemeBackground}" Height="99" Width="100" FontFamily="Segoe MDL2 Assets" FontSize="36" Content="&#xE700;" Foreground="{ThemeResource ThemeText}" Click="toggleSideNav"/>
+            <TextBlock Name="txtHeader" FontSize="32" Margin="10,0,0,0" RelativePanel.RightOf="btnToggleNav" RelativePanel.AlignVerticalCenterWithPanel="True">Placeholder Text</TextBlock>
+        </RelativePanel>
+
+        <!--Hamburger Navigation with splitview and frame-->
+        <SplitView Name="splitViewHamburger" Grid.Row="1" DisplayMode="Overlay" OpenPaneLength="250">
+            <SplitView.Pane>
+                <StackPanel Orientation="Vertical">
+                    <!--Radio buttons have a custom sytle that is in main.dict. Tag is bound to a fonticon object with a font family of segoe-mdle2-->
+                    <RadioButton Name="btnBrowse" Tag="&#xE71E;" Content="Browse Frames" GroupName="navButtons" Style="{StaticResource styleNavButton}" Checked="navButton_Checked"></RadioButton>
+                    <RadioButton Name="btnFramePicker" Tag="&#xE77B;" Content="Frame Picker" GroupName="navButtons" Style="{StaticResource styleNavButton}" Checked="navButton_Checked"></RadioButton>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="frameNavPage">
+                    <FlyoutBase.AttachedFlyout>
+                        <MenuFlyout/>
+                    </FlyoutBase.AttachedFlyout>
+                </Frame>
+            </SplitView.Content>
+        </SplitView>
+
+        <!--Dropdown Menus-->
+        <cc:FilterDropdownMenu x:Name="ddFilter" Grid.RowSpan="2" Margin="0,30,50,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="150"></cc:FilterDropdownMenu>
+        <cc:SortDropdownMenu x:Name="ddSort" Grid.RowSpan="2" Margin="0,30,250,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="150"></cc:SortDropdownMenu>
+    </Grid>
+</Page>

@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="Graded_Unit_2.CustomControls.NumericUpDownScroll"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+>
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> 
+        <ComboBox ItemsSource="{x:Bind Items}" PlaceholderText="{x:Bind Mode=OneWay, Path=PlaceholderText}" Name="cbMain" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" SelectionChanged="cbMain_SelectionChanged">
+            <ComboBoxItem></ComboBoxItem></ComboBox>
+    </Grid>
+</UserControl>

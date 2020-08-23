@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Graded_Unit_2.Pages.PrescriptionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cc="using:Graded_Unit_2.CustomControls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ThemeBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="100" Height="0.5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.75*" MinHeight="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Row 0-->
+        <RelativePanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Name="btnQuit" Height="100" Width="100" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{ThemeResource ThemeText}" Background="{ThemeResource ThemeBackground}" FontFamily="Segoe MDL2 Assets" FontSize="36" Content="&#xE711;" Foreground="{ThemeResource ThemeText}" Click="btnQuit_Click"></Button>
+            <TextBlock RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" TextWrapping="WrapWholeWords" TextAlignment="Center" Margin="100,0,100,0" FontWeight="ExtraBlack" FontSize="30" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Your Prescription</TextBlock>
+        </RelativePanel>
+        <!--Row 1-->
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <cc:PrescriptionControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="pRightEye" Text="Right Eye"></cc:PrescriptionControl>
+            <cc:PrescriptionControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="pLeftEye" Text="Left Eye" Grid.Row="2"></cc:PrescriptionControl>
+        </Grid>
+        <!--Row 2-->
+        <Button Name="btnContinue" Grid.Row="2" FontWeight="ExtraBlack" FontSize="50" Background="{ThemeResource ThemeMainButton}" HorizontalAlignment="Center" Height="100" Width="400" Click="continue_Click">Continue</Button>
+    </Grid>
+</Page>

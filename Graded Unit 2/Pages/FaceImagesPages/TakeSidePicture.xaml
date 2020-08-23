@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Graded_Unit_2.Pages.FaceImagesPages.TakeSidePicture"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.Pages.FaceImagesPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <CaptureElement Name="PreviewControl" Stretch="Uniform" Grid.RowSpan="3"/>
+        <TextBlock TextWrapping="Wrap" Foreground="White" TextAlignment="Center" HorizontalAlignment="Center" FontSize="40" Margin="100,50" Text="Please turn your head 90 degrees to your right"></TextBlock>
+        <Grid Grid.Row="2">
+            <Button Name="btnTakeSideImage" HorizontalAlignment="Center" Width="200" Height="100" Margin="0,50,0,50" Background="{ThemeResource ThemeMainButton}" Click="Button_Click">Take Picture</Button>
+        </Grid>
+    </Grid>
+</Page>

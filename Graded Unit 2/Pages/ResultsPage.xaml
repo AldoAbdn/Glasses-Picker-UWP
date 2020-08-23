@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Graded_Unit_2.Pages.ResultsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cc="using:Graded_Unit_2.CustomControls"
+    xmlns:md="using:Graded_Unit_2.Models"
+    mc:Ignorable="d"
+    >
+
+    <Grid HorizontalAlignment="Stretch" Name="mainGrid" Background="{ThemeResource ThemeBackground}">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+            <GridView Name="gvMain" Grid.Row="1"  Margin="1.5,0,0,0" HorizontalContentAlignment="Center" IsItemClickEnabled="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{x:Bind frames}" ItemClick="frame_Click" SizeChanged="GridView_SizeChanged">
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="Frame">
+                        <cc:FrameItem></cc:FrameItem>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </ScrollViewer>
+    </Grid>
+</Page>

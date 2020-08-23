@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Graded_Unit_2.Pages.FaceShapePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cc="using:Graded_Unit_2.CustomControls"
+    xmlns:md="using:Graded_Unit_2.Models"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="100" Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="2*" MinHeight="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Row 0-->
+        <RelativePanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Name="btnQuit" Height="100" Width="100" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{ThemeResource ThemeText}" Background="{ThemeResource ThemeBackground}" FontFamily="Segoe MDL2 Assets" FontSize="36" Content="&#xE711;" Foreground="{ThemeResource ThemeText}" Click="btnQuit_Click"></Button>
+            <TextBlock RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="100,0,100,0" TextAlignment="Center" TextWrapping="WrapWholeWords" Name="txtTitle" FontWeight="ExtraBlack" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">Your Face Shape</TextBlock>
+        </RelativePanel>
+        <!--Row 1-->
+        <TextBlock Grid.Row="1" Name="txtDescription" HorizontalAlignment="Center" VerticalAlignment="Center">Please select the face shape you would say best describes your own</TextBlock>
+        <!--Row 2-->
+        <GridView Grid.Row="2" Name="gvFaceShapes" ItemContainerStyle="{StaticResource StyleStretchGridViewItem}" Margin="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionMode="Single" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{x:Bind FaceShapes}" SizeChanged="gvFaceShapes_SizeChanged" SelectionChanged="gvFaceShapes_SelectionChanged">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="md:FaceShape">
+                    <cc:FaceShapeItem></cc:FaceShapeItem>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <!--Row 3-->
+        <Button Name="btnContinue" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{ThemeResource ThemeMainButton}" Width="400" Height="100" FontWeight="ExtraBlack" FontSize="50" Click="btnContinue_Click">Continue</Button>
+    </Grid>
+</Page>

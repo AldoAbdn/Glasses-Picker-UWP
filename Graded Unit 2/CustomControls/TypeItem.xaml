@@ -1,0 +1,24 @@
+﻿<UserControl
+    x:Class="Graded_Unit_2.CustomControls.TypeItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="200"
+    d:DesignWidth="200">
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="{x:Bind FrameType.imgSrc}"></ImageBrush>
+            </Grid.Background>
+        </Grid>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="{ThemeResource ThemeText}"  FontWeight="ExtraBold" Text="{x:Bind FrameType.type}"></TextBlock>
+    </Grid>
+</UserControl>

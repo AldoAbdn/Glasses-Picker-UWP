@@ -1,0 +1,6 @@
+MainPackage=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\bin\ARM\Release\Graded Unit 2_1.0.18.0_ARM.appx
+SymbolPackage=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\AppPackages\Black Version (x64, x86 and ARM)\Graded Unit 2_1.0.18.0_Test\Graded Unit 2_1.0.18.0_ARM.appxsym
+ResourcePack=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\bin\ARM\Release\Graded Unit 2_1.0.18.0_scale-100.appx
+ResourcePack=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\bin\ARM\Release\Graded Unit 2_1.0.18.0_scale-125.appx
+ResourcePack=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\bin\ARM\Release\Graded Unit 2_1.0.18.0_scale-150.appx
+ResourcePack=F:\Alistair\Studying\College\Graded Unit 2 UWP\Graded Unit 2-20170323T232107Z-001\Graded Unit 2\Graded Unit 2\bin\ARM\Release\Graded Unit 2_1.0.18.0_scale-400.appx

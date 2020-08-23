@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Graded_Unit_2.Pages.SunglassPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md ="using:Graded_Unit_2.Models"
+    xmlns:cc="using:Graded_Unit_2.CustomControls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" MinHeight="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="2*" MinHeight="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Row 0-->
+        <RelativePanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" Name="btnQuit" Height="100" Width="100" VerticalAlignment="Top" BorderThickness="0" BorderBrush="{ThemeResource ThemeText}" Background="{ThemeResource ThemeBackground}" FontFamily="Segoe MDL2 Assets" FontSize="36" Content="&#xE711;" Foreground="{ThemeResource ThemeText}" Click="btnQuit_Click"></Button>
+            <TextBlock RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" TextAlignment="Center" TextWrapping="WrapWholeWords" Margin="100,0,100,0" FontWeight="ExtraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">Are you looking for sunglasses?</TextBlock>
+        </RelativePanel>        
+        <!--Row 1-->
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Please Select an appropriate answer</TextBlock>
+        <!--Row 2-->
+        <GridView Name="gvSunglass" ItemContainerStyle="{StaticResource StyleStretchGridViewItem}" Margin="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionMode="Single" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{x:Bind sunglass}" SizeChanged="gvSunglass_SizeChanged" SelectionChanged="gvSunglass_SelectionChanged">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="md:Sunglass">
+                    <cc:SunglassItem></cc:SunglassItem>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <!--Row 3-->
+        <Button Name="btnContinue" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{ThemeResource ThemeMainButton}" Width="400" Height="100" FontWeight="ExtraBlack" FontSize="50" Click="btnContinue_Click">Continue</Button>
+    </Grid>
+</Page>

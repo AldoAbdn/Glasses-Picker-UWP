@@ -1,0 +1,23 @@
+﻿<UserControl
+    x:Class="Graded_Unit_2.CustomControls.FrameItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graded_Unit_2.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Stretch="Fill" Source="{x:Bind Frame.frameImages.views[0]}"></Image>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock FontWeight="ExtraBlack" Text="{x:Bind Frame.frameProperties.brand}" Margin="0,0,10,0"></TextBlock>
+            <TextBlock Text="{x:Bind Frame.frameProperties.model}"></TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>
